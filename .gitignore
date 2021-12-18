@@ -1,0 +1,31 @@
+node_modules
+.pnp
+.pnp.js
+generated
+schema.gql
+uploads
+uploads_test
+.parcel-cache
+
+# testing
+coverage
+
+# production
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist
+build
+packages/breezecss/css
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.idea/
+*.log
