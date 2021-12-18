@@ -1,0 +1,11 @@
+{
+  "name": "breezecss-example-preview",
+  "source": "index.html",
+  "private": true,
+  "scripts": {
+    "dev": "serve"
+  },
+  "dependencies": {
+    "breezecss": "latest"
+  }
+}

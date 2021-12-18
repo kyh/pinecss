@@ -1,0 +1,32 @@
+@layer base {
+  table {
+    width: 100%;
+    border-color: inherit;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+  }
+
+  th,
+  td {
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    border-bottom: var(--border-width) solid var(--table-border-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    text-align: left;
+    text-align: start;
+  }
+
+  tr {
+    background-color: var(--background-color);
+  }
+
+  table {
+    &[role="grid"] {
+      tbody tr:nth-child(odd) {
+        --background-color: var(--table-row-stripped-background-color);
+      }
+    }
+  }
+}

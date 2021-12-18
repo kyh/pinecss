@@ -1,0 +1,25 @@
+{
+  "name": "breezecss-preset",
+  "version": "0.0.1",
+  "keywords": [],
+  "description": "",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyh/breeze",
+    "directory": "packages/breezecss"
+  },
+  "author": "Kaiyu Hsu @kyh",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

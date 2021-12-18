@@ -1,0 +1,22 @@
+{
+  "name": "breeze",
+  "private": true,
+  "scripts": {
+    "postinstall": "lerna bootstrap --force-local && link-parent-bin",
+    "prepare": "husky install",
+    "publish": "lerna publish --no-private",
+    "clean": "lerna clean && lerna run clean",
+    "dev": "lerna run dev --parallel",
+    "reset": "npm run clean && npm i"
+  },
+  "dependencies": {
+    "concurrently": "^6.5.0",
+    "serve": "^13.0.2",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "link-parent-bin": "^2.0.0",
+    "prettier": "^2.5.0",
+    "pretty-quick": "^3.1.2",
+    "rimraf": "^3.0.2"
+  }
+}
