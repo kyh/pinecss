@@ -7,8 +7,5 @@
   },
   "dependencies": {
     "breezecss": "latest"
-  },
-  "devDependencies": {
-    "serve": "^13.0.2"
   }
 }

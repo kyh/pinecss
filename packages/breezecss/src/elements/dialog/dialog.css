@@ -1,0 +1,17 @@
+dialog {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 1em;
+  border: solid;
+  background-color: white;
+  color: black;
+}
+
+dialog:not([open]) {
+  display: none;
+}

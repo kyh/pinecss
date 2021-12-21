@@ -1,0 +1,8 @@
+[hidden],
+template {
+  display: none;
+}
+
+canvas {
+  display: inline-block;
+}
