@@ -1,1 +1,1 @@
-# Breeze: A minimal CSS framework.
+# Breeze: A minimal CSS library based off Tailwind defaults.

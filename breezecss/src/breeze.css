@@ -1,4 +1,9 @@
 @import "tailwindcss/base";
+
+@import "./layout/section.css";
+
+@import "./elements/typography.css";
+@import "./elements/article.css";
 @import "./elements/button.css";
 
 @import "tailwindcss/components";

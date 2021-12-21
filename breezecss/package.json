@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kyh/breeze",
-    "directory": "packages/breezecss"
+    "directory": "breezecss"
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
@@ -21,16 +21,25 @@
     "build:dev": "postcss ./src/breeze.css -o ./css/breeze.css",
     "build:prod": "NODE_ENV=production postcss ./src/breeze.css -o ./css/breeze.min.css --no-map",
     "prepublish": "npm run build",
-    "clean": "rimraf ./css"
+    "clean": "rimraf ./css",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "dependencies": {},
   "devDependencies": {
-    "breezecss-preset": "^0.0.1",
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/html": "^6.4.9",
+    "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "concurrently": "^6.5.0",
     "cssnano": "^5.0.13",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^3.0.7"
   },
   "engines": {
@@ -38,5 +47,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "dependencies": {}
 }

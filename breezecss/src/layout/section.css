@@ -1,0 +1,5 @@
+@layer base {
+  section {
+    @apply container mx-auto mb-10;
+  }
+}

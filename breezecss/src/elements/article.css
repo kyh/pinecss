@@ -1,0 +1,19 @@
+@layer base {
+  article {
+    @apply sm:rounded-md sm:shadow overflow-hidden;
+
+    > header,
+    > header + *,
+    > footer {
+      @apply px-5;
+    }
+
+    > header {
+      @apply pt-4;
+    }
+
+    > footer {
+      @apply pb-4;
+    }
+  }
+}

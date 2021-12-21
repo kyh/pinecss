@@ -1,0 +1,71 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-900 font-bold mt-0;
+  }
+
+  h1 {
+    @apply text-2xl mb-6;
+  }
+
+  h2 {
+    @apply text-xl mb-6;
+  }
+
+  h3 {
+    @apply text-lg mb-4;
+  }
+
+  h4 {
+    @apply text-base mb-4;
+  }
+
+  h5 {
+    @apply text-sm mb-2;
+  }
+
+  h6 {
+    @apply text-sm mb-2;
+  }
+
+  hgroup {
+    @apply mb-6;
+
+    > * {
+      @apply mb-0;
+    }
+
+    > span:first-child {
+      @apply font-bold;
+    }
+
+    > *:last-child {
+      @apply text-gray-700 text-base;
+    }
+  }
+
+  address,
+  blockquote,
+  dl,
+  figure,
+  form,
+  ol,
+  p,
+  pre,
+  table,
+  ul {
+    @apply text-base mt-0 mb-6;
+  }
+
+  blockquote > footer {
+    @apply text-gray-500 mt-4;
+  }
+
+  ::selection {
+    @apply bg-gray-200;
+  }
+}
