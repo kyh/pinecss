@@ -1,42 +1,25 @@
-import "./button.css";
-
 export default {
-  title: "Example/Button",
+  title: "Elements/Button",
   argTypes: {
     backgroundColor: { control: "color" },
     label: { control: "text" },
-    onClick: { action: "onClick" },
-    primary: { control: "boolean" },
-    size: {
+    style: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["default", "secondary", "large"],
     },
   },
 };
 
-const Template = ({
-  label,
-  primary = false,
-  size = "medium",
-  backgroundColor,
-  label,
-  onClick,
-}) => {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.innerText = label;
-  btn.addEventListener("click", onClick);
+const Template = ({ primary = false, backgroundColor, label }) => {
+  document.body.style.backgroundColor = backgroundColor;
+  // const btn = document.createElement("button");
+  // btn.type = "button";
+  // btn.innerText = label;
 
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
-  btn.className = ["storybook-button", `storybook-button--${size}`, mode].join(
-    " "
-  );
+  // const mode = primary ? "primary" : "secondary";
+  // btn.className = [mode].join(" ");
 
-  btn.style.backgroundColor = backgroundColor;
-
-  return btn;
+  return `<button>${label}</button>`;
 };
 
 export const Primary = Template.bind({});
@@ -47,17 +30,5 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: "Button",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
   label: "Button",
 };
