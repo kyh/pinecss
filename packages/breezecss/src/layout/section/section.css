@@ -3,13 +3,3 @@
     @apply container mx-auto mb-10;
   }
 }
-
-@layer components {
-  .stack-h {
-    @apply flex justify-around;
-  }
-
-  .stack-v {
-    @apply flex flex-col;
-  }
-}

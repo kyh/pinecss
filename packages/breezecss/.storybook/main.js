@@ -12,5 +12,5 @@ module.exports = {
       },
     },
   ],
-  framework: "@storybook/html",
+  framework: "@storybook/react",
 };
