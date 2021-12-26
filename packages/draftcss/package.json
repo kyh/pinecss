@@ -1,13 +1,13 @@
 {
-  "name": "breezecss",
+  "name": "draftcss",
   "version": "0.0.2",
   "keywords": [],
   "description": "",
-  "style": "css/breeze.css",
+  "style": "css/draft.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/kyh/breeze",
-    "directory": "packages/breezecss"
+    "directory": "packages/draftcss"
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
@@ -18,8 +18,8 @@
     "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm run build:dev\" \"npm run build:prod\"",
-    "build:dev": "postcss ./src/breeze.css -o ./css/breeze.css",
-    "build:prod": "NODE_ENV=production postcss ./src/breeze.css -o ./css/breeze.min.css --no-map",
+    "build:dev": "postcss ./src/draft.css -o ./css/draft.css",
+    "build:prod": "NODE_ENV=production postcss ./src/draft.css -o ./css/breeze.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./css",
     "build-storybook": "build-storybook"
@@ -46,5 +46,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "1c5b9bee50858889b0e09950a3bfcad38780a6f3"
 }
