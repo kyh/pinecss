@@ -1,10 +1,18 @@
 @import "tailwindcss/base";
 
+@import "./layout/main/main.css";
+@import "./layout/nav/nav.css";
 @import "./layout/section/section.css";
 
 @import "./elements/typography/typography.css";
 @import "./elements/article/article.css";
 @import "./elements/button/button.css";
+@import "./elements/dialog/dialog.css";
+@import "./elements/form/form.css";
+@import "./elements/table/table.css";
+
+@import "./utilities/accessibility.css";
+@import "./utilities/loading.css";
 
 @import "tailwindcss/components";
 

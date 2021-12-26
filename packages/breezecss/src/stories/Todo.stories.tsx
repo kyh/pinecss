@@ -13,7 +13,11 @@ const DetailView = ({
     <tr>
       <td>{data.content}</td>
       <td>
-        <button type="button" onClick={() => onEdit(data)}>
+        <button
+          type="button"
+          className="secondary"
+          onClick={() => onEdit(data)}
+        >
           Edit
         </button>
       </td>
@@ -25,10 +29,12 @@ const FormView = ({
   editing,
   onSubmit,
   onDelete,
+  onCancel,
 }: {
   editing: Todo;
   onSubmit: (todo: Todo) => void;
   onDelete: (todo: Todo) => void;
+  onCancel: () => void;
 }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,25 +50,37 @@ const FormView = ({
     onDelete(editing);
   };
 
+  const handleCancel = () => {
+    onCancel();
+  };
+
   return (
-    <>
-      <h3>{editing.id ? "Update" : "Create New"}</h3>
-      <form onSubmit={handleSubmit}>
-        <input type="hidden" name="id" value={editing.id} />
-        <input
-          name="content"
-          type="text"
-          placeholder="Post content"
-          defaultValue={editing.content}
-        />
-        <button type="submit">{editing.id ? "Update" : "Create"}</button>
-        {editing.id && (
+    <form onSubmit={handleSubmit}>
+      <header>
+        <h3>{editing.id ? "Update Todo" : "Create New Todo"}</h3>
+      </header>
+      <input type="hidden" name="id" value={editing.id} />
+      <label htmlFor="content">Content</label>
+      <input
+        id="content"
+        name="content"
+        type="text"
+        placeholder="Todo content"
+        defaultValue={editing.content}
+      />
+      <footer>
+        {editing.id ? (
           <button type="button" className="secondary" onClick={handleDelete}>
             Delete
           </button>
+        ) : (
+          <button type="button" className="secondary" onClick={handleCancel}>
+            Cancel
+          </button>
         )}
-      </form>
-    </>
+        <button type="submit">{editing.id ? "Update" : "Create"}</button>
+      </footer>
+    </form>
   );
 };
 
@@ -86,7 +104,7 @@ export const Todo = () => {
   return (
     <>
       <nav>
-        <strong>Todo</strong>
+        <h1>Todo</h1>
         <ul>
           <li>
             <button
@@ -101,18 +119,24 @@ export const Todo = () => {
       <main>
         {editing !== false && (
           <dialog key={editing.id} open>
-            <article>
-              <button aria-label="Close" onClick={() => setEditing(false)} />
-              <FormView
-                editing={editing}
-                onSubmit={handleSubmit}
-                onDelete={handleDelete}
-              />
-            </article>
+            <FormView
+              editing={editing}
+              onSubmit={handleSubmit}
+              onDelete={handleDelete}
+              onCancel={() => setEditing(false)}
+            />
           </dialog>
         )}
         <figure>
-          <table role="grid">
+          <table>
+            <thead className="bg-gray-50">
+              <tr>
+                <th>Content</th>
+                <th>
+                  <span hidden>Edit</span>
+                </th>
+              </tr>
+            </thead>
             <tbody>
               {todos.map((todo) => (
                 <DetailView

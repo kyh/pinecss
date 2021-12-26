@@ -1,15 +1,15 @@
 dialog {
-  display: block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
-  padding: 1em;
-  border: solid;
-  background-color: white;
-  color: black;
+  @apply block left-0 top-0 absolute w-fit h-fit bg-white mx-auto;
+
+  &::before {
+    content: "";
+    @apply fixed inset-0 top-0 bottom-0 left-0 right-0 bg-gray-500 bg-opacity-75 transition-opacity;
+  }
+}
+
+dialog > * {
+  @apply relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6;
+  min-width: 400px;
 }
 
 dialog:not([open]) {

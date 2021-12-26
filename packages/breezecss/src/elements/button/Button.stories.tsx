@@ -1,23 +1,40 @@
-export const All = () => {
-  const containerStyles = {
-    display: "flex",
-    gap: "1rem",
-    marginBottom: "1rem",
-  };
+const css = `
+  .h-stack {
+    display: flex;
+    gap: 1rem;
+  }
 
+  .v-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+`;
+
+export const All = () => {
   return (
     <>
-      <div style={containerStyles}>
-        <button>Primary</button>
-        <button className="secondary">Secondary</button>
-      </div>
-      <div style={containerStyles}>
-        <button className="outline">Primary outline</button>
-        <button className="outline secondary">Secondary outline</button>
-      </div>
-      <div style={containerStyles}>
-        <a role="button">Link Button</a>
-      </div>
+      <style>{css}</style>
+      <section className="v-stack">
+        <div className="h-stack">
+          <button>Primary</button>
+          <button className="secondary">Secondary</button>
+        </div>
+        <div className="h-stack">
+          <a role="button">Link Button</a>
+          <a role="button" className="secondary">
+            Secondary Link Button
+          </a>
+        </div>
+        <div className="h-stack">
+          <button disabled aria-busy="true">
+            Loading Button
+          </button>
+        </div>
+        <div className="h-stack">
+          <button disabled>Disabled Button</button>
+        </div>
+      </section>
     </>
   );
 };

@@ -1,50 +1,40 @@
-@layer base {
-  [aria-busy="true"] {
-    @apply cursor-progress;
+[aria-busy="true"] {
+  @apply cursor-progress;
+}
+
+[aria-busy="true"]:not(input):not(select):not(textarea) {
+  &::before {
+    @apply inline-flex w-4 h-4;
+    border: 0.15rem solid currentColor;
+    border-radius: 1rem;
+    border-right-color: transparent;
+    animation: spinner 0.75s linear infinite;
+    content: "";
   }
 
-  [aria-busy="true"]:not(input):not(select):not(textarea) {
+  &:not(:empty) {
     &::before {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      border: 0.1875em solid currentColor;
-      border-radius: 1em;
-      border-right-color: transparent;
-      vertical-align: text-bottom;
-      vertical-align: -0.125em;
-      animation: spinner 0.75s linear infinite;
-      content: "";
-      opacity: var(--loading-spinner-opacity);
-    }
-
-    &:not(:empty) {
-      &::before {
-        margin-right: calc(var(--spacing) * 0.5);
-        margin-left: 0;
-        margin-inline-end: calc(var(--spacing) * 0.5);
-        margin-inline-start: 0;
-      }
-    }
-
-    &:empty {
-      @apply text-center;
+      @apply mr-2;
     }
   }
 
-  button,
-  input[type="submit"],
-  input[type="button"],
-  input[type="reset"],
-  a {
-    &[aria-busy="true"] {
-      @apply pointer-events-none;
-    }
+  &:empty {
+    @apply text-center;
   }
+}
 
-  @keyframes spinner {
-    to {
-      transform: rotate(360deg);
-    }
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a {
+  &[aria-busy="true"] {
+    @apply pointer-events-none;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }

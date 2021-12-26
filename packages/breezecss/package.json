@@ -15,14 +15,13 @@
     "css"
   ],
   "scripts": {
-    "dev": "npm run build:dev -- --watch --verbose",
+    "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm run build:dev\" \"npm run build:prod\"",
     "build:dev": "postcss ./src/breeze.css -o ./css/breeze.css",
     "build:prod": "NODE_ENV=production postcss ./src/breeze.css -o ./css/breeze.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./css",
-    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {

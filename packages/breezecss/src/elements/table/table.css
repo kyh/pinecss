@@ -1,32 +1,31 @@
-@layer base {
-  table {
-    width: 100%;
-    border-color: inherit;
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-indent: 0;
-  }
+table {
+  @apply min-w-full divide-y divide-gray-200;
+}
 
-  th,
-  td {
-    padding: calc(var(--spacing) / 2) var(--spacing);
-    border-bottom: var(--border-width) solid var(--table-border-color);
-    color: var(--color);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight);
-    text-align: left;
-    text-align: start;
-  }
+thead {
+  @apply bg-gray-50;
+}
 
-  tr {
-    background-color: var(--background-color);
-  }
+th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500;
+}
 
-  table {
-    &[role="grid"] {
-      tbody tr:nth-child(odd) {
-        --background-color: var(--table-row-stripped-background-color);
-      }
+tbody {
+  @apply divide-y divide-gray-200;
+}
+
+td {
+  @apply px-6 py-3 whitespace-nowrap text-sm text-gray-500;
+
+  &:last-child {
+    @apply text-right;
+  }
+}
+
+table {
+  &[role="grid"] {
+    tbody tr:nth-child(odd) {
+      @apply bg-gray-100;
     }
   }
 }

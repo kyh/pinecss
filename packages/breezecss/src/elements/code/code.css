@@ -1,72 +1,68 @@
-@layer base {
-  pre,
-  code,
-  kbd,
-  samp {
-    font-family: var(--font-family);
-    font-size: 0.875em;
-  }
+pre,
+code,
+kbd,
+samp {
+  @apply font-mono text-sm;
+}
 
-  pre {
-    -ms-overflow-style: scrollbar;
-    overflow: auto;
-  }
+pre {
+  @apply overflow-auto;
+}
 
-  pre,
-  code,
-  kbd {
-    background: var(--code-background-color);
-    color: var(--code-color);
-    font-weight: var(--font-weight);
-    line-height: initial;
-    border-radius: var(--border-radius);
-  }
+pre,
+code,
+kbd {
+  @apply bg-gray-100;
+  background: var(--code-background-color);
+  color: var(--code-color);
+  font-weight: var(--font-weight);
+  line-height: initial;
+  border-radius: var(--border-radius);
+}
 
-  code,
-  kbd {
-    display: inline-block;
-    padding: 0.375rem 0.5rem;
-  }
+code,
+kbd {
+  @apply inline-flex px-2 py-1 rounded-sm;
+}
 
-  pre {
+pre {
+  display: block;
+  margin-bottom: var(--spacing);
+  overflow-x: auto;
+
+  > code {
+    background: transparent;
     display: block;
-    margin-bottom: var(--spacing);
-    overflow-x: auto;
+    padding: var(--spacing);
+    font-size: 14px;
+    line-height: var(--line-height);
+  }
+}
 
-    > code {
-      background: transparent;
-      display: block;
-      padding: var(--spacing);
-      font-size: 14px;
-      line-height: var(--line-height);
-    }
+code {
+  b {
+    color: var(--code-tag-color);
+    font-weight: var(--font-weight);
   }
 
-  code {
-    b {
-      color: var(--code-tag-color);
-      font-weight: var(--font-weight);
-    }
-
-    i {
-      color: var(--code-property-color);
-      font-style: normal;
-    }
-
-    u {
-      color: var(--code-value-color);
-      text-decoration: none;
-    }
-
-    em {
-      color: var(--code-comment-color);
-      font-style: normal;
-    }
+  i {
+    color: var(--code-property-color);
+    font-style: normal;
   }
 
-  kbd {
-    background-color: var(--code-kbd-background-color);
-    color: var(--code-kbd-color);
-    vertical-align: middle;
+  u {
+    color: var(--code-value-color);
+    text-decoration: none;
   }
+
+  em {
+    color: var(--code-comment-color);
+    font-style: normal;
+  }
+}
+
+kbd {
+  background-color: var(--code-kbd-background-color);
+  color: var(--code-kbd-color);
+  vertical-align: middle;
 }
