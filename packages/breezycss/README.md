@@ -1,1 +1,1 @@
-# BreezyCSS: A micro CSS library for semantic HTML
+# BreezyCSS: A micro CSS library

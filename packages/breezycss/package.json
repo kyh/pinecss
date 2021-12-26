@@ -11,15 +11,12 @@
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
-  "files": [
-    "css"
-  ],
   "scripts": {
     "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm run build:dev\" \"npm run build:prod\"",
     "build:dev": "postcss ./src/breezy.css -o ./css/breezy.css",
-    "build:prod": "NODE_ENV=production postcss ./src/breezy.css -o ./css/breeze.min.css --no-map",
+    "build:prod": "NODE_ENV=production postcss ./src/breezy.css -o ./css/breezy.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./css",
     "build-storybook": "build-storybook"
