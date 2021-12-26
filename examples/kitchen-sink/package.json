@@ -1,11 +1,11 @@
 {
-  "name": "draftcss-example-kitchen-sink",
+  "name": "breezycss-example-kitchen-sink",
   "source": "index.html",
   "private": true,
   "scripts": {
     "dev": "serve"
   },
   "dependencies": {
-    "draftcss": "latest"
+    "breezycss": "latest"
   }
 }

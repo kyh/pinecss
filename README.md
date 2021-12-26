@@ -1,1 +1,1 @@
-# Breeze: A micro CSS library for semantic HTML.
+# A collection of experimental CSS utilities

@@ -1,4 +1,4 @@
-import "../src/draft.css";
+import "../src/breezy.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

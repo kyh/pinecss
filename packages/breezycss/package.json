@@ -1,13 +1,13 @@
 {
-  "name": "draftcss",
+  "name": "breezycss",
   "version": "0.0.3",
   "keywords": [],
   "description": "",
-  "style": "css/draft.css",
+  "style": "css/breezy.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyh/breeze",
-    "directory": "packages/draftcss"
+    "url": "https://github.com/kyh/css",
+    "directory": "packages/breezycss"
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
@@ -18,8 +18,8 @@
     "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm run build:dev\" \"npm run build:prod\"",
-    "build:dev": "postcss ./src/draft.css -o ./css/draft.css",
-    "build:prod": "NODE_ENV=production postcss ./src/draft.css -o ./css/breeze.min.css --no-map",
+    "build:dev": "postcss ./src/breezy.css -o ./css/breezy.css",
+    "build:prod": "NODE_ENV=production postcss ./src/breezy.css -o ./css/breeze.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./css",
     "build-storybook": "build-storybook"

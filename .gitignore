@@ -18,7 +18,7 @@ coverage
 .env.production.local
 dist
 build
-packages/draftcss/css
+packages/breezycss/css
 
 # misc
 .DS_Store
