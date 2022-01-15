@@ -24,7 +24,7 @@ form button:last-child {
 }
 
 form > footer {
-  @apply flex justify-end mt-6;
+  @apply flex justify-end mt-8;
 
   > button:last-child {
     @apply mt-0;

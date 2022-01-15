@@ -1,13 +1,13 @@
 {
-  "name": "breezycss",
+  "name": "headlesscss",
   "version": "0.0.5",
   "keywords": [],
   "description": "",
-  "style": "css/breezy.css",
+  "style": "css/headless.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/kyh/css",
-    "directory": "packages/breezycss"
+    "directory": "packages/headlesscss"
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
@@ -15,8 +15,8 @@
     "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm run build:dev\" \"npm run build:prod\"",
-    "build:dev": "postcss ./src/breezy.css -o ./css/breezy.css",
-    "build:prod": "NODE_ENV=production postcss ./src/breezy.css -o ./css/breezy.min.css --no-map",
+    "build:dev": "postcss ./src/headless.css -o ./css/headless.css",
+    "build:prod": "NODE_ENV=production postcss ./src/headless.css -o ./css/headless.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./css",
     "build-storybook": "build-storybook"

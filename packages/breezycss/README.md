@@ -1,1 +1,1 @@
-# BreezyCSS: A micro CSS library
+# headlessCSS: A micro CSS library
