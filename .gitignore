@@ -18,7 +18,7 @@ coverage
 .env.production.local
 dist
 build
-packages/headlesscss/css
+packages/core/css
 
 # misc
 .DS_Store
