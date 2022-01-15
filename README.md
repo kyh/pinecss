@@ -1,1 +1,1 @@
-# A collection of experimental CSS utilities
+# HeadlessCSS: A classless micro CSS library

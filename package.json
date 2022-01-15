@@ -1,5 +1,5 @@
 {
-  "name": "breeze",
+  "name": "headlesscss",
   "private": true,
   "scripts": {
     "postinstall": "lerna bootstrap --force-local && link-parent-bin",

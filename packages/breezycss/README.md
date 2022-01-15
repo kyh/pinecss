@@ -1,1 +1,1 @@
-# headlessCSS: A micro CSS library
+# HeadlessCSS: A classless micro CSS library

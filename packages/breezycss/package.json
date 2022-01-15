@@ -1,13 +1,13 @@
 {
   "name": "headlesscss",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "keywords": [],
-  "description": "",
+  "description": "A classless micro CSS library",
   "style": "css/headless.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyh/css",
-    "directory": "packages/headlesscss"
+    "url": "https://github.com/kyh/headlesscss",
+    "directory": "packages/core"
   },
   "author": "Kaiyu Hsu @kyh",
   "license": "MIT",
