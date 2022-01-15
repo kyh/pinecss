@@ -1,6 +1,6 @@
 {
   "name": "headlesscss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "description": "A classless micro CSS library",
   "style": "css/headless.css",
