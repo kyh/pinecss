@@ -1,4 +1,4 @@
-import "../src/headless.css";
+import "../src/pine.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

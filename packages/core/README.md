@@ -1,1 +1,1 @@
-# HeadlessCSS: A classless micro CSS library
+# PineCSS: A classless micro CSS library

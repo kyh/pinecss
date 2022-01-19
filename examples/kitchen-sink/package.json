@@ -1,11 +1,11 @@
 {
-  "name": "headlesscss-example-kitchen-sink",
+  "name": "pinecss-example-kitchen-sink",
   "source": "index.html",
   "private": true,
   "scripts": {
     "dev": "serve"
   },
   "dependencies": {
-    "headlesscss": "latest"
+    "pinecss": "latest"
   }
 }

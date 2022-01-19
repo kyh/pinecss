@@ -1,1 +1,6 @@
-# HeadlessCSS: A classless micro CSS library
+# PineCSS: A micro CSS library
+
+### Some great alternatives
+
+- [Pico](https://picocss.com/)
+- [Simple.css](https://simplecss.org/)
