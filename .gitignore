@@ -23,8 +23,7 @@ tailwind.css
 .cache
 .vercel
 .output
-public/build
-api/_build
+_build
 
 # misc
 .DS_Store
