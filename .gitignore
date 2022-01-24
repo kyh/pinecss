@@ -18,12 +18,12 @@ coverage
 .env.production.local
 dist
 build
+_build
 packages/core/style
 tailwind.css
 .cache
 .vercel
 .output
-_build
 
 # misc
 .DS_Store
