@@ -97,7 +97,11 @@ export const Layout = ({ children }: Props) => {
     <>
       <Sidebar>{navItems}</Sidebar>
       <div className="flex flex-col flex-1">
-        <main className="px-8 pt-16 prose prose-invert">{children}</main>
+        <section className="px-8 py-4 md:pt-16 md:pb-8">
+          <main className="flex flex-col-reverse mx-auto max-w-3xl md:flex-row">
+            {children}
+          </main>
+        </section>
         <Footer prev={prev} next={next} />
       </div>
     </>
