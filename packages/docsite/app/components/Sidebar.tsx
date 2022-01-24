@@ -21,7 +21,7 @@ export const Sidebar = ({ children }: Props) => {
   }, []);
 
   return (
-    <aside className="flex flex-col w-full max-h-screen overflow-auto md:w-64">
+    <aside className="sticky top-0 flex flex-col w-full max-h-screen overflow-auto bg-zinc-900 border-green-900 border-opacity-30 md:border-r md:w-64">
       <div className="flex justify-between items-center p-5">
         <Link to="/">
           <svg
@@ -44,9 +44,7 @@ export const Sidebar = ({ children }: Props) => {
         </button>
       </div>
       {sidebarOpen && (
-        <nav className="flex-1 flex-col items-stretch pb-5 border-green-900 border-opacity-30 md:border-r">
-          {children}
-        </nav>
+        <nav className="flex-1 flex-col items-stretch pb-5">{children}</nav>
       )}
     </aside>
   );

@@ -1,4 +1,4 @@
 module.exports = {
   content: [],
-  presets: [require("./presets/default")],
+  presets: [require("./src/preset")],
 };
