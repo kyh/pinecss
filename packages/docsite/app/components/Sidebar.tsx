@@ -73,7 +73,7 @@ const NavItem = ({ label, to }: NavItemProps) => {
   if (to.includes("https://")) {
     return (
       <a
-        className="flex items-center text-sm py-2 px-5 hover:bg-green-900 hover:bg-opacity-20 hover:text-white"
+        className="flex items-center text-sm py-2 px-5 transition hover:bg-green-900 hover:bg-opacity-20 hover:text-white"
         href={to}
         target="_blank"
       >
@@ -87,7 +87,7 @@ const NavItem = ({ label, to }: NavItemProps) => {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `flex items-center text-sm py-2 px-5 ${
+        `flex items-center text-sm py-2 px-5 transition ${
           isActive
             ? "bg-green-900 bg-opacity-30 text-green-400"
             : "hover:bg-green-900 hover:bg-opacity-20 hover:text-white"

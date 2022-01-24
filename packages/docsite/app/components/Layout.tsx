@@ -1,5 +1,5 @@
-import { Fragment, useEffect } from "react";
-import { useLocation, useMatches } from "remix";
+import { Fragment } from "react";
+import { useMatches } from "remix";
 import { Sidebar } from "./Sidebar";
 import { Footer } from "./Footer";
 
@@ -14,6 +14,7 @@ const navSections: Section[] = [
     navItems: [
       { label: "Introduction", to: "/" },
       { label: "Installation", to: "/installation" },
+      { label: "Customize", to: "/customize" },
     ],
   },
   {
@@ -70,14 +71,6 @@ type Props = {
 };
 
 export const Layout = ({ children }: Props) => {
-  const location = useLocation();
-  const focusedProp = location.hash.replace("#", "");
-
-  useEffect(() => {
-    const el = document.getElementById(focusedProp);
-    if (el) el.scrollIntoView();
-  }, [focusedProp]);
-
   const matches = useMatches();
 
   const flatNavItems = navSections.flatMap((section) => section.navItems);
