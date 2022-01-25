@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./app/**/*.{ts,tsx,jsx,js}", "./remix.config.js"],
+  content: ["./app/**/*.{ts,tsx,jsx,js}", "./config/*.{ts,tsx,jsx,js}"],
   theme: {
     extend: {},
   },
