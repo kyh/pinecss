@@ -2,14 +2,14 @@ module.exports = [
   {
     base: ["[aria-controls]"],
     class: ["[aria-controls]"],
-    style: {
+    styles: {
       "@apply cursor-pointer": "",
     },
   },
   {
     base: ['[aria-disabled="true"]', "[disabled]"],
     class: ['[aria-disabled="true"]', "[disabled]"],
-    style: {
+    styles: {
       "@apply cursor-not-allowed": "",
     },
   },

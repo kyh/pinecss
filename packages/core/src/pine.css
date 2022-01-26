@@ -1,8 +1,3 @@
 @import "tailwindcss/base";
-
-@import "./elements/dialog/dialog.css";
-@import "./elements/form/form.css";
-@import "./elements/table/table.css";
-
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

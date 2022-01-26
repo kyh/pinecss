@@ -128,5 +128,5 @@ export const Typography = () => {
 };
 
 export default {
-  title: "Elements/Typography",
+  title: "Base/Typography",
 };

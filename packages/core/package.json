@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "keywords": [],
   "description": "A classless micro CSS library",
+  "main": "src/plugin.js",
   "style": "style/pine.css",
   "repository": {
     "type": "git",

@@ -1,34 +1,25 @@
 const plugin = require("tailwindcss/plugin");
 
-// utilities
-const accessibility = require("./utilities/accessibility");
-const loading = require("./utilities/loading");
-
-// layout
-const main = require("./layout/main/main");
-const nav = require("./layout/nav/nav");
-const section = require("./layout/section/section");
-
-// base
-const typography = require("./elements/typography/typography");
-
-// components
-const article = require("./elements/article/article");
-const button = require("./elements/button/button");
-
 const styles = plugin.withOptions((options = { strategy: "base" }) => {
   return ({ addBase }) => {
     const strategy = options.strategy;
 
     const rules = [
-      ...accessibility,
-      ...loading,
-      ...main,
-      ...nav,
-      ...section,
-      ...typography,
-      ...article,
-      ...button,
+      // base
+      ...require("./base/accessibility"),
+      ...require("./base/loading"),
+      ...require("./base/typography"),
+      // layout
+      ...require("./layout/main/main"),
+      ...require("./layout/nav/nav"),
+      ...require("./layout/section/section"),
+      ...require("./layout/figure/figure"),
+      // components
+      ...require("./components/card/card"),
+      ...require("./components/button/button"),
+      ...require("./components/dialog/dialog"),
+      ...require("./components/table/table"),
+      ...require("./components/form/form"),
     ];
 
     const finalRules = rules

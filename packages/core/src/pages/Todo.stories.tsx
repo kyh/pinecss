@@ -59,15 +59,17 @@ const FormView = ({
       <header>
         <h3>{editing.id ? "Update Todo" : "Create New Todo"}</h3>
       </header>
-      <input type="hidden" name="id" value={editing.id} />
-      <label htmlFor="content">Content</label>
-      <input
-        id="content"
-        name="content"
-        type="text"
-        placeholder="Todo content"
-        defaultValue={editing.content}
-      />
+      <div>
+        <label htmlFor="content">Content</label>
+        <input
+          id="content"
+          name="content"
+          type="text"
+          placeholder="Todo content"
+          defaultValue={editing.content}
+        />
+        <input type="hidden" name="id" value={editing.id} />
+      </div>
       <footer>
         {editing.id ? (
           <button type="button" className="secondary" onClick={handleDelete}>
@@ -129,7 +131,7 @@ export const Todo = () => {
         )}
         <figure>
           <table>
-            <thead className="bg-gray-50">
+            <thead>
               <tr>
                 <th>Content</th>
                 <th>
