@@ -1,6 +1,6 @@
 {
   "name": "pinecss",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [],
   "description": "A classless micro CSS library",
   "main": "src/plugin.js",
