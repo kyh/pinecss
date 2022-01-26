@@ -24,7 +24,7 @@ export const Typography = () => {
       </ul>
 
       <h3>Inline text elements</h3>
-      <div className="grid">
+      <div className="h-stack">
         <p>
           <a href="#">Primary link</a>
         </p>
@@ -39,7 +39,7 @@ export const Typography = () => {
           </a>
         </p>
       </div>
-      <div className="grid">
+      <div className="h-stack">
         <p>
           <strong>Bold</strong>
         </p>
@@ -50,7 +50,7 @@ export const Typography = () => {
           <u>Underline</u>
         </p>
       </div>
-      <div className="grid">
+      <div className="h-stack">
         <p>
           <del>Deleted</del>
         </p>
@@ -61,7 +61,7 @@ export const Typography = () => {
           <s>Strikethrough</s>
         </p>
       </div>
-      <div className="grid">
+      <div className="h-stack">
         <p>
           <small>Small </small>
         </p>
@@ -72,7 +72,7 @@ export const Typography = () => {
           Text <sup>Sup</sup>
         </p>
       </div>
-      <div className="grid">
+      <div className="h-stack">
         <p>
           <abbr title="Abbreviation" data-tooltip="Abbreviation">
             Abbr.
