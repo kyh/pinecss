@@ -1,13 +1,16 @@
-/**
- * @type {import('@remix-run/dev/config').AppConfig}
- */
 const mdx = require("./config/mdx");
 
+/**
+ * @type {import('@remix-run/dev').AppConfig}
+ */
 module.exports = {
-  appDirectory: "app",
-  assetsBuildDirectory: "public/build",
-  publicPath: "/build/",
-  serverBuildDirectory: "api/_build",
+  serverBuildTarget: "cloudflare-pages",
+  server: "./server.js",
+  devServerBroadcastDelay: 1000,
   ignoredRouteFiles: [".*"],
-  mdx: mdx,
+  // appDirectory: "app",
+  // assetsBuildDirectory: "public/build",
+  // serverBuildPath: "functions/[[path]].js",
+  // publicPath: "/build/",
+  mdx,
 };
