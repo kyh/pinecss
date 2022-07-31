@@ -1,1 +1,1 @@
-# PineCSS: A classless micro CSS library
+# Heartwood: A classless micro CSS library

@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "remix";
-import pineStyles from "pinecss/style/pine.css";
+import pineStyles from "heartwood/style/heartwood.css";
 import appStyles from "./tailwind.css";
 import { Layout } from "./components/Layout";
 
@@ -18,7 +18,7 @@ export const links = () => {
 };
 
 export const meta = () => {
-  return { title: "PineCSS Docs" };
+  return { title: "Heartwood Docs" };
 };
 
 export default function App() {

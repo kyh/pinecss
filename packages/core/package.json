@@ -1,13 +1,13 @@
 {
-  "name": "pinecss",
-  "version": "0.0.6",
+  "name": "heartwood",
+  "version": "0.0.1",
   "keywords": [],
   "description": "A classless micro CSS library",
   "main": "src/plugin.js",
-  "style": "style/pine.css",
+  "style": "style/heartwood.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyh/pinecss",
+    "url": "https://github.com/kyh/heartwood",
     "directory": "packages/core"
   },
   "author": "Kaiyu Hsu @kyh",
@@ -16,8 +16,8 @@
     "dev": "start-storybook -p 6006",
     "prebuild": "npm run clean",
     "build": "concurrently \"npm:build:*\"",
-    "build:dev": "postcss ./src/pine.css -o ./style/pine.css",
-    "build:prod": "NODE_ENV=production postcss ./src/pine.css -o ./style/pine.min.css --no-map",
+    "build:dev": "postcss ./src/heartwood.css -o ./style/heartwood.css",
+    "build:prod": "NODE_ENV=production postcss ./src/heartwood.css -o ./style/heartwood.min.css --no-map",
     "prepublish": "npm run build",
     "clean": "rimraf ./style",
     "build-storybook": "build-storybook"
@@ -34,10 +34,10 @@
     "babel-loader": "^8.2.3",
     "cssnano": "^5.0.13",
     "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0",
+    "postcss-cli": "^10.0.0",
     "postcss-import": "^14.0.2",
-    "react": "^17.0.2",
-    "tailwindcss": "^3.0.7"
+    "react": "^18.2.0",
+    "tailwindcss": "^3.1.7"
   },
   "engines": {
     "node": ">=14.0.0"

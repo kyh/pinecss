@@ -56,7 +56,7 @@ const navSections: Section[] = [
     navItems: [
       {
         label: "Github",
-        to: "https://github.com/kyh/pinecss",
+        to: "https://github.com/kyh/heartwood",
       },
       {
         label: "Discord",

@@ -1,4 +1,4 @@
-import "../src/pine.css";
+import "../src/heartwood.css";
 import "./styles.css";
 
 export const parameters = {

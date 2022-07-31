@@ -1,4 +1,4 @@
-# PineCSS: A micro CSS library
+# Heartwood: A micro CSS library
 
 ### Some great alternatives
 
